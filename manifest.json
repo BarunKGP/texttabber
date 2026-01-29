@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TextTabber",
+  "version": "1.0.0",
+  "description": "Fast, keyword-based tab switching for Chrome.",
+  "action": {},
+  "permissions": ["tabs", "scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "commands": {
+    "open-search": {
+      "suggested_key": { "default": "Ctrl+Shift+K" },
+      "description": "Trigger texttabber search"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content.jsx"],
+      "run_at": "document_start"
+    }
+  ]
+}
