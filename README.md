@@ -12,7 +12,7 @@ texttabber provides a keyboard-centric interface for users with high tab counts.
 
 ## Technical Specifications
 
-- **Frontend**: React 18
+- **Frontend**: React 19
 - **Build Tool**: Vite + CRXJS (Vite Plugin)
 - **Styling**: Encapsulated CSS Modules
 - **Communication**: Chrome Runtime Messaging API
